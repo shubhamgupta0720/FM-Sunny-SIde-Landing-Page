@@ -1,0 +1,177 @@
+@use "utils/colors" as colors;
+@use "utils/alignments" as alignments;
+@use "utils/fonts" as fonts;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: fonts.$Fraunces;
+    color: colors.$VeryDarkDesaturatedBlue;
+}
+
+p{
+    font-family: fonts.$Barlow;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    width: 100%;
+    height: 88%;
+    background-image: url(images/desktop/image-header.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    
+    > #navBar{
+        padding: 60px 40px;
+        @include alignments.rowCenterAlign();
+        justify-content: space-between;
+        height: 38px;
+
+        > img{
+            width: 180px;
+            height: 40px;
+        }
+
+        > .nav-bar-options{
+            width: 35%;
+            height: 100%;
+
+            @include alignments.rowCenterAlign();
+            justify-content: space-between;
+
+            > a{
+                text-decoration: none;
+                font-size: 18px;
+                font-family: fonts.$Barlow;
+                font-weight: 0;
+                color: colors.$White;
+            }
+
+            > a:nth-child(4){
+                font-family: fonts.$Fraunces;
+                background-color: colors.$White;
+                color: colors.$VeryDarkDesaturatedBlue;
+                padding: 20px 30px;
+                border-radius: 30px;
+                font-weight: 800;
+                font-size: 16px;
+            }
+        }
+    }
+
+    > #appTitle{
+        width: 100%;
+        height: 60%;
+        margin: 45px 0px 144px 0px;
+        @include alignments.columnCenterAlign();
+        justify-content: space-around;
+
+        > h1{
+            color: colors.$White;
+            font-size: 60px;
+            letter-spacing: 10px;
+        }
+    }
+
+    > #appFeatures{
+
+        > div{
+            width: 100%;
+
+            @include alignments.rowCenterAlign();
+
+            > div{
+                padding: 100px;
+
+                > h1{
+                    font-size: 48px;
+                    font-weight: 900;
+                }
+
+                > p{
+                    margin: 40px 0px;
+                    font-size: 18px;
+                    color: colors.$DarkGrayishBlue;
+                    line-height: 30px;
+                    width: 450px;
+                }
+
+                > a{
+                    text-decoration: none;
+                    font-family: fonts.$Fraunces;
+                    color: colors.$VeryDarkDesaturatedBlue;
+                    font-weight: 900;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        > .graphic-photography{
+            background-color: orange;
+            width: 100%;
+            height: 600px;
+
+            > .graphic{
+                width: 50%;
+                height: 100%;
+                background-image: url(images/desktop/image-graphic-design.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                text-align: center;
+                
+                > h1{
+                    width: 100%;
+                    margin-top: 280px;
+                    font-size: 28px;
+                    font-weight: 900;
+                    color: colors.$DarkDesaturatedCyan;
+                }
+                
+                > p{
+                    color: colors.$DarkDesaturatedCyan;
+                    width: 100%;
+                    padding: 0px 60px;
+                    margin-top: 30px;
+                }
+            }
+
+            > .photography{
+                width: 50%;
+                height: 100%;
+                background-image: url(images/desktop/image-photography.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                text-align: center;
+
+                > h1{
+                    width: 100%;
+                    margin-top: 280px;
+                    font-size: 28px;
+                    font-weight: 900;
+                    color: colors.$DarkBlue;
+                }
+                
+                > p{
+                    color: colors.$DarkBlue;
+                    width: 100%;
+                    padding: 0px 60px;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+
+    
+}
