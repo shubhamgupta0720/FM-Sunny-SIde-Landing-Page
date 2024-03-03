@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 
-h1{
+h1, h3{
     font-family: fonts.$Fraunces;
     color: colors.$VeryDarkDesaturatedBlue;
 }
@@ -26,7 +26,7 @@ body{
 }
 
 main{
-    width: 100%;
+    width: 100vw;
     height: 88%;
     background-image: url(images/desktop/image-header.jpg);
     background-size: contain;
@@ -67,7 +67,18 @@ main{
                 border-radius: 30px;
                 font-weight: 800;
                 font-size: 16px;
+                transition: 0.4s ease;
+
+                &:hover{
+                    cursor: pointer;
+                    color: colors.$White;
+                    background-color: rgba(255, 255, 255, 0.2)
+                }
             }
+        }
+
+        > .hamburger{
+            display: none;
         }
     }
 
@@ -114,12 +125,44 @@ main{
                     color: colors.$VeryDarkDesaturatedBlue;
                     font-weight: 900;
                     font-size: 18px;
+                    
+                    &::after{
+                        background: colors.$Yellow;
+                        content: '';
+                        width: 135px;
+                        height: 8px;
+                        position: absolute;
+                        left: 100px;
+                        top: 1250px;
+                    }
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        > .stand-out{
+
+            > div{
+
+                > a{
+
+                    &::after{
+                        background: colors.$SoftRed;
+                        content: '';
+                        width: 135px;
+                        height: 8px;
+                        position: absolute;
+                        left: 818px;
+                        top: 1850px;
+                    }
                 }
             }
         }
 
         > .graphic-photography{
-            background-color: orange;
             width: 100%;
             height: 600px;
 
@@ -173,5 +216,102 @@ main{
         }
     }
 
-    
+    > #clientTestimonials{
+        width: 100%;
+        height: 700px;
+        text-align: center;
+        @include alignments.columnCenterAlign();
+
+        > h1{
+            letter-spacing: 6px;
+            color: colors.$GrayishBlue;
+        }
+
+        > .testimonial-cards{
+            height: 450px;
+            @include alignments.rowCenterAlign();
+
+            > .testimonial-card{
+                width: 100%;
+                height: 100%;
+                @include alignments.columnCenterAlign();
+                padding: 80px 60px;
+
+                > img{
+                    width: 70px;
+                    border-radius: 50px;
+                }
+
+                > p{
+                    width: 100%;
+                    margin: 40px 0px;
+                    line-height: 30px;
+                    color: colors.$VeryDarkGrayishBlue;
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+
+                > h3{
+                    font-size: 20px;
+                    font-weight: 900;
+                }
+
+                > h6{
+                    margin-top: 14px;
+                    font-family: fonts.$Barlow;
+                    color: colors.$GrayishBlue;
+                    font-size: 16px;
+                    font-weight: 100;
+                }
+            }
+        }
+    }
+
+    > #galleryPane{
+        width: 100%;
+        @include alignments.rowCenterAlign();
+
+        > img{
+            width: 25%;
+        }
+    }
+}
+
+#footer{
+    width: 100%;
+    height: 400px;
+    background-color: colors.$FooterBackgroundCyan;
+    text-align: center;
+    @include alignments.columnCenterAlign();
+
+    > img{
+        margin-top: 60px;
+        width: 200px;
+    }
+
+    > .nav-bar-options{
+        margin-top: 40px;
+
+        > a{
+            text-decoration: none;
+            font-size: 18px;
+            font-family: fonts.$Barlow;
+            font-weight: 0;
+            color: colors.$DarkModerateCyan;
+            padding: 10px 35px;
+        }
+    }
+
+    > .social-media{
+        margin-top: 50px;
+
+        > img{
+            margin-top: 20px;
+            padding: 16px;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
 }

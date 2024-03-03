@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-h1 {
+h1, h3 {
   font-family: "Fraunces", serif;
   color: hsl(212, 27%, 19%);
 }
@@ -21,7 +21,7 @@ body {
 }
 
 main {
-  width: 100%;
+  width: 100vw;
   height: 88%;
   background-image: url(images/desktop/image-header.jpg);
   background-size: contain;
@@ -63,6 +63,15 @@ main > #navBar > .nav-bar-options > a:nth-child(4) {
   border-radius: 30px;
   font-weight: 800;
   font-size: 16px;
+  transition: 0.4s ease;
+}
+main > #navBar > .nav-bar-options > a:nth-child(4):hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+main > #navBar > .hamburger {
+  display: none;
 }
 main > #appTitle {
   width: 100%;
@@ -106,8 +115,28 @@ main > #appFeatures > div > div > a {
   font-weight: 900;
   font-size: 18px;
 }
+main > #appFeatures > div > div > a::after {
+  background: hsl(51, 100%, 49%);
+  content: "";
+  width: 135px;
+  height: 8px;
+  position: absolute;
+  left: 100px;
+  top: 1250px;
+}
+main > #appFeatures > div > div > a:hover {
+  cursor: pointer;
+}
+main > #appFeatures > .stand-out > div > a::after {
+  background: hsl(7, 99%, 70%);
+  content: "";
+  width: 135px;
+  height: 8px;
+  position: absolute;
+  left: 818px;
+  top: 1850px;
+}
 main > #appFeatures > .graphic-photography {
-  background-color: orange;
   width: 100%;
   height: 600px;
 }
@@ -152,6 +181,102 @@ main > #appFeatures > .graphic-photography > .photography > p {
   width: 100%;
   padding: 0px 60px;
   margin-top: 30px;
+}
+main > #clientTestimonials {
+  width: 100%;
+  height: 700px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main > #clientTestimonials > h1 {
+  letter-spacing: 6px;
+  color: hsl(210, 4%, 67%);
+}
+main > #clientTestimonials > .testimonial-cards {
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main > #clientTestimonials > .testimonial-cards > .testimonial-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 60px;
+}
+main > #clientTestimonials > .testimonial-cards > .testimonial-card > img {
+  width: 70px;
+  border-radius: 50px;
+}
+main > #clientTestimonials > .testimonial-cards > .testimonial-card > p {
+  width: 100%;
+  margin: 40px 0px;
+  line-height: 30px;
+  color: hsl(213, 9%, 39%);
+  font-weight: 700;
+  font-size: 18px;
+}
+main > #clientTestimonials > .testimonial-cards > .testimonial-card > h3 {
+  font-size: 20px;
+  font-weight: 900;
+}
+main > #clientTestimonials > .testimonial-cards > .testimonial-card > h6 {
+  margin-top: 14px;
+  font-family: "Barlow", sans-serif;
+  color: hsl(210, 4%, 67%);
+  font-size: 16px;
+  font-weight: 100;
+}
+main > #galleryPane {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main > #galleryPane > img {
+  width: 25%;
+}
+
+#footer {
+  width: 100%;
+  height: 400px;
+  background-color: hsl(168, 42%, 69%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#footer > img {
+  margin-top: 60px;
+  width: 200px;
+}
+#footer > .nav-bar-options {
+  margin-top: 40px;
+}
+#footer > .nav-bar-options > a {
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 0;
+  color: hsl(168, 34%, 41%);
+  padding: 10px 35px;
+}
+#footer > .social-media {
+  margin-top: 50px;
+}
+#footer > .social-media > img {
+  margin-top: 20px;
+  padding: 16px;
+}
+#footer > .social-media > img:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
