@@ -130,16 +130,16 @@ main{
                     font-weight: 900;
                     font-size: 18px;
                     
-                    &::after{
-                        background: colors.$Yellow;
-                        content: '';
-                        width: 135px;
-                        height: 8px;
-                        position: absolute;
-                        left: 100px;
-                        top: 1216px;
-                        opacity: 0.3;
-                    }
+                    // &::after{
+                        // background: colors.$Yellow;
+                        // content: '';
+                        // width: 135px;
+                        // height: 8px;
+                        // position: absolute;
+                        // left: 100px;
+                        // top: 1216px;
+                        // opacity: 0.3;
+                    // }
 
                     &:hover{
                         cursor: pointer;
@@ -154,16 +154,16 @@ main{
 
                 > a{
 
-                    &::after{
-                        background: colors.$SoftRed;
-                        content: '';
-                        width: 135px;
-                        height: 8px;
-                        position: absolute;
-                        left: 818px;
-                        top: 1816px;
-                        opacity: 0.3;
-                    }
+                    // &::after{
+                    //     background: colors.$SoftRed;
+                    //     content: '';
+                    //     width: 135px;
+                    //     height: 8px;
+                    //     position: absolute;
+                    //     left: 818px;
+                    //     top: 1816px;
+                    //     opacity: 0.3;
+                    // }
                 }
             }
         }
