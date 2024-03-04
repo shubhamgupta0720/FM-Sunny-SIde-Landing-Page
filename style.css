@@ -15,9 +15,17 @@ p {
   font-family: "Barlow", sans-serif;
 }
 
+.mobile {
+  display: none;
+}
+
 body {
   width: 100vw;
   height: 100vh;
+}
+
+.active {
+  display: block;
 }
 
 main {
@@ -277,6 +285,197 @@ main > #galleryPane > img {
 }
 #footer > .social-media > img:hover {
   cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    width: 100%;
+  }
+  main {
+    width: 100%;
+    min-width: 375px;
+    height: 65vh;
+    max-height: 536.25px;
+    background-image: url(images/mobile/image-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+  }
+  main > #navBar {
+    padding: 50px 25px;
+    width: 100%;
+  }
+  main > #navBar > .logo {
+    width: 140px;
+    height: 28px;
+  }
+  main > #navBar > .nav-bar-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    justify-content: space-around;
+    background-color: hsl(0, 0%, 100%);
+    position: fixed;
+    top: 120px;
+    right: 23px;
+    height: 300px;
+    width: 90%;
+  }
+  main > #navBar > .nav-bar-options > a {
+    color: hsl(232, 10%, 55%);
+  }
+  main > #navBar > .nav-bar-options > a:nth-child(4) {
+    background-color: hsl(51, 100%, 49%);
+  }
+  main > #navBar::after {
+    display: none;
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: hsl(0, 0%, 100%);
+    background-image: -webkit-linear-gradient(-45deg, rgb(62, 191, 255) 50%, hsl(0, 0%, 100%) 50%);
+    top: 90px;
+    right: 23px;
+  }
+  main > #navBar > .hamburger {
+    display: block;
+    width: 28px;
+    height: 18px;
+  }
+  main > #appTitle {
+    margin: 20px 0px 94px 0px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  main > #appTitle > h1 {
+    font-size: 40px;
+    margin-bottom: 20%;
+  }
+  main > #appFeatures {
+    text-align: center;
+  }
+  main > #appFeatures > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main > #appFeatures > div > .app-feature-description {
+    padding: 70px 0px;
+  }
+  main > #appFeatures > div > div {
+    width: 100%;
+    padding: 0px;
+  }
+  main > #appFeatures > div > div > h1 {
+    font-size: 34px;
+  }
+  main > #appFeatures > div > div > p {
+    width: 100%;
+    padding: 0px 14px;
+  }
+  main > #appFeatures > div > div > a::after {
+    display: none;
+  }
+  main > #appFeatures > .stand-out > div > h1 {
+    padding: 0px 40px;
+  }
+  main > #appFeatures > .stand-out > div > a::after {
+    display: none;
+  }
+  main > #appFeatures > .graphic-photography {
+    width: 100%;
+    height: 1200px;
+  }
+  main > #appFeatures > .graphic-photography > .graphic {
+    width: 100%;
+    background-image: url(images/mobile/image-graphic-design.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+  main > #appFeatures > .graphic-photography > .graphic > h1 {
+    width: 100%;
+    margin-top: 350px;
+    font-size: 28px;
+    font-weight: 900;
+    color: hsl(167, 40%, 24%);
+  }
+  main > #appFeatures > .graphic-photography > .graphic > p {
+    color: hsl(167, 40%, 24%);
+    width: 100%;
+    padding: 0px 10px;
+    margin-top: 30px;
+  }
+  main > #appFeatures > .graphic-photography > .photography {
+    width: 100%;
+    background-image: url(images/mobile/image-photography.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+  main > #appFeatures > .graphic-photography > .photography > h1 {
+    width: 100%;
+    margin-top: 380px;
+    font-size: 28px;
+    font-weight: 900;
+    color: hsl(198, 62%, 26%);
+  }
+  main > #appFeatures > .graphic-photography > .photography > p {
+    color: hsl(198, 62%, 26%);
+    width: 100%;
+    padding: 0px 10px;
+    margin-top: 30px;
+  }
+  main > #clientTestimonials {
+    height: auto;
+    margin: 80px 0px;
+  }
+  main > #clientTestimonials > h1 {
+    font-size: 18px;
+    letter-spacing: 4px;
+  }
+  main > #clientTestimonials > .testimonial-cards {
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main > #clientTestimonials > .testimonial-cards > .testimonial-card {
+    padding: 40px 10px;
+  }
+  main > #clientTestimonials > .testimonial-cards > .testimonial-card > p {
+    width: 100%;
+    padding: 0px 20px;
+  }
+  main > #galleryPane {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main > #galleryPane > img {
+    width: 100%;
+  }
+  main > #footer > .nav-bar-options {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  main > #footer > .nav-bar-options > a {
+    padding: 0px;
+    font-size: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
