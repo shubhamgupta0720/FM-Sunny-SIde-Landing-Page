@@ -33,9 +33,9 @@ main{
     width: 100vw;
     height: 88%;
     background-image: url(images/desktop/image-header.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    object-fit: contain;
+    object-fit: cover;
     
     > #navBar{
         padding: 60px 40px;
@@ -137,7 +137,8 @@ main{
                         height: 8px;
                         position: absolute;
                         left: 100px;
-                        top: 1250px;
+                        top: 1216px;
+                        opacity: 0.3;
                     }
 
                     &:hover{
@@ -160,7 +161,8 @@ main{
                         height: 8px;
                         position: absolute;
                         left: 818px;
-                        top: 1850px;
+                        top: 1816px;
+                        opacity: 0.3;
                     }
                 }
             }
@@ -441,7 +443,7 @@ main{
                             // content: '';
                             // width: 130px;
                             // height: 8px;
-                            // position: absolute;
+                            // position: relative;
                             // left: 148px;
                             // top: 1220px;
                             // opacity: 0.3;

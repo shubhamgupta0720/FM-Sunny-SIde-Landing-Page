@@ -28,9 +28,9 @@ main {
   width: 100vw;
   height: 88%;
   background-image: url(images/desktop/image-header.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  object-fit: contain;
+  object-fit: cover;
 }
 main > #navBar {
   padding: 60px 40px;
@@ -126,7 +126,8 @@ main > #appFeatures > div > div > a::after {
   height: 8px;
   position: absolute;
   left: 100px;
-  top: 1250px;
+  top: 1216px;
+  opacity: 0.3;
 }
 main > #appFeatures > div > div > a:hover {
   cursor: pointer;
@@ -138,7 +139,8 @@ main > #appFeatures > .stand-out > div > a::after {
   height: 8px;
   position: absolute;
   left: 818px;
-  top: 1850px;
+  top: 1816px;
+  opacity: 0.3;
 }
 main > #appFeatures > .graphic-photography {
   width: 100%;
