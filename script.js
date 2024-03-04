@@ -1,15 +1,17 @@
 // Script for navigation bar
 const hamburger = document.getElementById('hamburgerIcon');
-const navBar = document.getElementById('navBarOptions');
+const navBarOptions = document.getElementById('navBarOptions');
+const st1 = document.querySelector("::after"); 
 
-if(hamburger){
-    hamburger.addEventListener('click', () => {
-        navBar.style.display = "block";
-    })
-}
+hamburger.addEventListener('click', () => {
+    if(navBarOptions.style.display === "flex"){
+        navBarOptions.style.display = "none";
+        st1.style.display = "none";
+    }
+    else{
+        navBarOptions.style.display = "flex";
+        navBarOptions.classList.add('active');
+        st1.style.display = "block";
+    }
+})
 
-if(close){
-    close.addEventListener('click', () => {
-        nav.classList.remove('active');
-    })
-}

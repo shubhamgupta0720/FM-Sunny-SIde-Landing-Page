@@ -29,10 +29,6 @@ body{
     height: 100vh;
 }
 
-.active{
-    display: block;
-}
-
 main{
     width: 100vw;
     height: 88%;
@@ -356,16 +352,19 @@ main{
             }
 
             > .nav-bar-options{
-
-                @include alignments.columnCenterAlign();
-                padding: 20px 0px;
+                display: flex;
+                flex-direction: column;
                 justify-content: space-around;
+                padding: 20px 0px;
                 background-color: colors.$White;
                 position: fixed;
                 top: 120px;
                 right: 23px;
                 height: 300px;
                 width: 90%;
+                transition: 0.3s;
+
+                display: none;
 
                 > a{
                     color: colors.$DarkGrayishBlue;
@@ -373,6 +372,10 @@ main{
 
                 > a:nth-child(4){
                     background-color: colors.$Yellow;
+
+                    &:active{
+                        color: black;
+                    }
                 }
             }
 
@@ -434,13 +437,14 @@ main{
 
                         &::after{
                             display: none;
-                            // background: colors.$SoftRed;
+                            // background: colors.$Yellow;
                             // content: '';
-                            // width: 135px;
+                            // width: 130px;
                             // height: 8px;
                             // position: absolute;
-                            // left: 18px;
-                            // top: 1850px;
+                            // left: 148px;
+                            // top: 1220px;
+                            // opacity: 0.3;
                         }
 
                     }
@@ -459,13 +463,14 @@ main{
     
                         &::after{
                             display: none;
+                            // position: relative;
                             // background: colors.$SoftRed;
                             // content: '';
                             // width: 135px;
                             // height: 8px;
                             // position: absolute;
-                            // left: 18px;
-                            // top: 1850px;
+                            // left: 42%;
+                            // top: 2018px;
                         }
                     }
                 }

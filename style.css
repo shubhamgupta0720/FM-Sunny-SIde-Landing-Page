@@ -24,10 +24,6 @@ body {
   height: 100vh;
 }
 
-.active {
-  display: block;
-}
-
 main {
   width: 100vw;
   height: 88%;
@@ -316,22 +312,25 @@ main > #galleryPane > img {
   main > #navBar > .nav-bar-options {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0px;
     justify-content: space-around;
+    padding: 20px 0px;
     background-color: hsl(0, 0%, 100%);
     position: fixed;
     top: 120px;
     right: 23px;
     height: 300px;
     width: 90%;
+    transition: 0.3s;
+    display: none;
   }
   main > #navBar > .nav-bar-options > a {
     color: hsl(232, 10%, 55%);
   }
   main > #navBar > .nav-bar-options > a:nth-child(4) {
     background-color: hsl(51, 100%, 49%);
+  }
+  main > #navBar > .nav-bar-options > a:nth-child(4):active {
+    color: black;
   }
   main > #navBar::after {
     display: none;
